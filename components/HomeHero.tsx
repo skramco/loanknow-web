@@ -65,7 +65,7 @@ export function HomeHero() {
         LoanKnow is for learning. Answers are educational, not a loan offer or
         commitment.
       </p>
-      <PartnerCredits dettGradientId="dettHome" layout="inline" />
+      <PartnerCredits />
     </section>
   );
 }

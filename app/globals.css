@@ -210,7 +210,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 4px;
 }
 
 .sidebar-partner-link {
@@ -220,17 +220,48 @@ button {
   color: inherit;
 }
 
+.partner-logo {
+  opacity: 0.85;
+  vertical-align: baseline;
+}
+
+a:hover .partner-logo,
+.credit-wordmark-link:hover .partner-logo {
+  opacity: 1;
+}
+
 .sidebar-partner-link:hover .sidebar-partner-wordmark {
-  opacity: 0.82;
+  opacity: 1;
 }
 
 .sidebar-partner-wordmark {
   display: block;
-  height: 15px;
+  height: 11px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
   object-position: left center;
+}
+
+/* Sidebar: normalize lowercase x-height to Ratesboard @ 11px. */
+.sidebar-partner-wordmark--owen {
+  height: 10px;
+}
+
+.sidebar-partner-wordmark--dett {
+  height: 14px;
+}
+
+.partner-logo--owen.credit-wordmark {
+  height: 11px;
+}
+
+.partner-logo--clozable.credit-wordmark {
+  height: 11.5px;
+}
+
+.partner-logo--dett.credit-wordmark {
+  height: 12.5px;
 }
 
 .sidebar-partner-wordmark--invert {
@@ -277,8 +308,8 @@ button {
   min-width: 0;
 }
 
-.credit-wordmark-link:hover .credit-wordmark {
-  opacity: 0.82;
+.credit-lead {
+  flex: 0 0 auto;
 }
 
 .credit-wordmark {
@@ -513,22 +544,20 @@ button {
   gap: 10px 16px;
   font-size: 12px;
   color: var(--muted);
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 }
 
 .credits-inline .credit {
+  display: inline-flex;
+  align-items: baseline;
   flex-wrap: wrap;
   white-space: normal;
+  gap: 5px;
 }
 
 .credits-inline .credit-wordmark {
   height: 13px;
-}
-
-.credits-inline .credit-icon {
-  height: 14px;
-  width: 14px;
 }
 
 .chat-view {
