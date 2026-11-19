@@ -210,7 +210,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 4px;
 }
 
 .sidebar-partner-link {
@@ -236,24 +236,20 @@ a:hover .partner-logo,
 
 .sidebar-partner-wordmark {
   display: block;
-  height: 12px;
+  height: 11px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
   object-position: left center;
 }
 
-/* Sidebar: optical cap-height match to Ratesboard at 12px. */
+/* Sidebar: normalize lowercase x-height to Ratesboard @ 11px. */
 .sidebar-partner-wordmark--owen {
-  height: 9px;
-}
-
-.sidebar-partner-wordmark--clozable {
   height: 10px;
 }
 
 .sidebar-partner-wordmark--dett {
-  height: 11.5px;
+  height: 14px;
 }
 
 .partner-logo--owen.credit-wordmark {

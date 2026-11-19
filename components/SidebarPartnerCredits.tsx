@@ -1,7 +1,7 @@
 import { PARTNER_LOGOS } from "@/lib/partnerLogos";
 import { PartnerLogoLink } from "@/components/PartnerLogoLink";
 
-const SIDEBAR_LOGO_HEIGHT_PX = 12;
+const SIDEBAR_LOGO_HEIGHT_PX = 11;
 
 export function SidebarPartnerCredits() {
   return (
