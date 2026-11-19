@@ -192,6 +192,51 @@ button {
   text-underline-offset: 2px;
 }
 
+.sidebar-partners {
+  margin: 8px 4px 2px;
+}
+
+.sidebar-partners-label {
+  margin: 0 0 6px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.25;
+}
+
+.sidebar-partners-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.sidebar-partner-link {
+  display: inline-flex;
+  line-height: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-partner-link:hover .sidebar-partner-wordmark {
+  opacity: 0.82;
+}
+
+.sidebar-partner-wordmark {
+  display: block;
+  height: 15px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.sidebar-partner-wordmark--invert {
+  filter: brightness(0) invert(1);
+}
+
 .credits {
   display: flex;
   flex-direction: column;
