@@ -222,6 +222,29 @@ button {
   color: var(--ink);
 }
 
+.credit-wordmark-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  line-height: 0;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.credit-wordmark-link:hover .credit-wordmark {
+  opacity: 0.82;
+}
+
+.credit-wordmark {
+  display: block;
+  height: 13px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .credit-icon {
   height: 15px;
   width: 15px;
@@ -452,6 +475,10 @@ button {
 .credits-inline .credit {
   flex-wrap: wrap;
   white-space: normal;
+}
+
+.credits-inline .credit-wordmark {
+  height: 13px;
 }
 
 .credits-inline .credit-icon {

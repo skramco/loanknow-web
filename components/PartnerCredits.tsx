@@ -38,15 +38,22 @@ export function PartnerCredits({ dettGradientId, layout = "inline" }: Props) {
         </a>
       </div>
       <div className="credit">
-        <PartnerCreditIcon src="/partners/ratesboard-icon-color.svg" />
         Pricing from{" "}
         <a
           href="https://ratesboard.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="credit-nested-link"
+          className="credit-wordmark-link"
+          aria-label="Ratesboard"
         >
-          Ratesboard
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/partners/ratesboard-wordmark-color.svg"
+            alt=""
+            className="credit-wordmark"
+            width={72}
+            height={13}
+          />
         </a>
       </div>
     </div>
