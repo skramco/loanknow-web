@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LoanKnowLogo } from "@/components/icons/LoanKnowLogo";
-import { PartnerCredits } from "@/components/PartnerCredits";
+import { SidebarPartnerCredits } from "@/components/SidebarPartnerCredits";
 import type { LocalQuestion } from "@/lib/history";
 
 type Props = {
@@ -105,7 +105,7 @@ export function Sidebar({
           Clear history on this device
         </button>
       </div>
-      <PartnerCredits dettGradientId="dettSidebar" layout="stack" />
+      <SidebarPartnerCredits />
     </aside>
   );
 }
