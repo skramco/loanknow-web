@@ -3,9 +3,8 @@
 import { useRouter } from "next/navigation";
 import { AskForm } from "@/components/AskForm";
 import { CheckIcon } from "@/components/icons/CheckIcon";
-import { DettIcon } from "@/components/icons/DettIcon";
 import { LoanKnowLogo } from "@/components/icons/LoanKnowLogo";
-import { OwenIcon } from "@/components/icons/OwenIcon";
+import { PartnerCredits } from "@/components/PartnerCredits";
 import { useLocalHistory } from "@/components/HistoryProvider";
 import { SUGGESTED_QUESTIONS } from "@/lib/constants";
 import { writeSession } from "@/lib/session";
@@ -66,21 +65,7 @@ export function HomeHero() {
         LoanKnow is for learning. Answers are educational, not a loan offer or
         commitment.
       </p>
-      <div className="credits-inline">
-        <div className="credit">
-          <OwenIcon className="credit-icon" />
-          Powered by Owen AI
-        </div>
-        <a
-          className="credit"
-          href="https://dett.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <DettIcon gradientId="dettHome" className="credit-icon" />
-          Calculations by dett.io
-        </a>
-      </div>
+      <PartnerCredits dettGradientId="dettHome" layout="inline" />
     </section>
   );
 }
