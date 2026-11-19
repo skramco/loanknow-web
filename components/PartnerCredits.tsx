@@ -1,17 +1,14 @@
-import { ClozableIcon } from "@/components/icons/ClozableIcon";
 import { DettIcon } from "@/components/icons/DettIcon";
 import { OwenIcon } from "@/components/icons/OwenIcon";
-import { RatesboardIcon } from "@/components/icons/RatesboardIcon";
+import { PartnerCreditIcon } from "@/components/PartnerCreditIcon";
 
 type Props = {
   dettGradientId: string;
   layout?: "inline" | "stack";
 };
 
-/** Homepage/sidebar partner credits — Owen, dett.io, Clozable, Ratesboard. */
 export function PartnerCredits({ dettGradientId, layout = "inline" }: Props) {
-  const wrapClass =
-    layout === "inline" ? "credits-inline" : "credits";
+  const wrapClass = layout === "inline" ? "credits-inline" : "credits";
 
   return (
     <div className={wrapClass}>
@@ -28,25 +25,35 @@ export function PartnerCredits({ dettGradientId, layout = "inline" }: Props) {
         <DettIcon gradientId={dettGradientId} className="credit-icon" />
         Calculations by dett.io
       </a>
-      <a
-        className="credit"
-        href="https://clozable.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <ClozableIcon className="credit-icon" />
-        Ready to buy? Get loan-ready with Clozable
-      </a>
       <div className="credit">
-        <RatesboardIcon className="credit-icon" />
-        Live pricing provided by lenders from{" "}
+        <PartnerCreditIcon src="/partners/clozable-icon-color.svg" />
+        Loan readiness from{" "}
         <a
-          href="https://ratesboard.com"
+          href="https://clozable.com"
           target="_blank"
           rel="noopener noreferrer"
           className="credit-nested-link"
         >
-          Ratesboard
+          Clozable
+        </a>
+      </div>
+      <div className="credit">
+        Pricing from{" "}
+        <a
+          href="https://ratesboard.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="credit-wordmark-link"
+          aria-label="Ratesboard"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/partners/ratesboard-wordmark-color.svg"
+            alt=""
+            className="credit-wordmark"
+            width={72}
+            height={13}
+          />
         </a>
       </div>
     </div>

@@ -195,18 +195,21 @@ button {
 .credits {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin: 12px 6px 2px;
-  font-size: 11.5px;
+  gap: 4px;
+  margin: 8px 4px 2px;
+  font-size: 11px;
   color: var(--muted);
 }
 
 .credit {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   text-decoration: none;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  line-height: 1.25;
+  min-width: 0;
 }
 
 .credit .credit-nested-link {
@@ -217,6 +220,29 @@ button {
 
 .credit .credit-nested-link:hover {
   color: var(--ink);
+}
+
+.credit-wordmark-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  line-height: 0;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.credit-wordmark-link:hover .credit-wordmark {
+  opacity: 0.82;
+}
+
+.credit-wordmark {
+  display: block;
+  height: 13px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .credit-icon {
@@ -439,11 +465,20 @@ button {
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 10px 16px;
   font-size: 12px;
   color: var(--muted);
   align-items: center;
   justify-content: center;
+}
+
+.credits-inline .credit {
+  flex-wrap: wrap;
+  white-space: normal;
+}
+
+.credits-inline .credit-wordmark {
+  height: 13px;
 }
 
 .credits-inline .credit-icon {
