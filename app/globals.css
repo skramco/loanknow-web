@@ -206,6 +206,17 @@ button {
   align-items: center;
   gap: 7px;
   text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.credit .credit-nested-link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: inherit;
+}
+
+.credit .credit-nested-link:hover {
+  color: var(--ink);
 }
 
 .credit-icon {

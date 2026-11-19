@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LoanKnowLogo } from "@/components/icons/LoanKnowLogo";
-import { OwenIcon } from "@/components/icons/OwenIcon";
-import { DettIcon } from "@/components/icons/DettIcon";
+import { PartnerCredits } from "@/components/PartnerCredits";
 import type { LocalQuestion } from "@/lib/history";
 
 type Props = {
@@ -106,21 +105,7 @@ export function Sidebar({
           Clear history on this device
         </button>
       </div>
-      <div className="credits">
-        <div className="credit">
-          <OwenIcon className="credit-icon" />
-          Powered by Owen AI
-        </div>
-        <a
-          className="credit"
-          href="https://dett.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <DettIcon gradientId="dettSidebar" className="credit-icon" />
-          Calculations by dett.io
-        </a>
-      </div>
+      <PartnerCredits dettGradientId="dettSidebar" layout="stack" />
     </aside>
   );
 }
