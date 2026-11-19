@@ -1,63 +1,23 @@
-const WORDMARK_HEIGHT_PX = 15;
+import { PARTNER_LOGOS } from "@/lib/partnerLogos";
+import { PartnerLogoLink } from "@/components/PartnerLogoLink";
 
-type SidebarPartner = {
-  name: string;
-  href: string;
-  src: string;
-  color?: boolean;
-};
-
-const partners: SidebarPartner[] = [
-  {
-    name: "Owen AI",
-    href: "https://owenai.com",
-    src: "/partners/owen-wordmark.svg",
-  },
-  {
-    name: "dett.io",
-    href: "https://dett.io",
-    src: "/partners/dett-wordmark.svg",
-  },
-  {
-    name: "Clozable",
-    href: "https://clozable.com",
-    src: "/partners/clozable-wordmark.svg",
-    color: true,
-  },
-  {
-    name: "Ratesboard",
-    href: "https://ratesboard.com",
-    src: "/partners/ratesboard-wordmark-color.svg",
-    color: true,
-  },
-];
+const SIDEBAR_LOGO_HEIGHT_PX = 12;
 
 export function SidebarPartnerCredits() {
   return (
     <div className="sidebar-partners">
       <p className="sidebar-partners-label">Powered by</p>
       <ul className="sidebar-partners-list">
-        {partners.map((partner) => (
+        {PARTNER_LOGOS.map((partner) => (
           <li key={partner.href}>
-            <a
+            <PartnerLogoLink
               href={partner.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              label={partner.name}
+              src={partner.src}
               className="sidebar-partner-link"
-              aria-label={partner.name}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={partner.src}
-                alt=""
-                className={
-                  partner.color
-                    ? "sidebar-partner-wordmark sidebar-partner-wordmark--color"
-                    : "sidebar-partner-wordmark"
-                }
-                height={WORDMARK_HEIGHT_PX}
-              />
-            </a>
+              imgClassName={`sidebar-partner-wordmark partner-logo sidebar-partner-wordmark--${partner.id}`}
+              height={SIDEBAR_LOGO_HEIGHT_PX}
+            />
           </li>
         ))}
       </ul>

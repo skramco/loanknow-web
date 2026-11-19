@@ -1,61 +1,62 @@
-import { DettIcon } from "@/components/icons/DettIcon";
-import { OwenIcon } from "@/components/icons/OwenIcon";
-import { PartnerCreditIcon } from "@/components/PartnerCreditIcon";
+import { PartnerLogoLink } from "@/components/PartnerLogoLink";
 
-type Props = {
-  dettGradientId: string;
-  layout?: "inline" | "stack";
+const FOOTER_LOGO_HEIGHT_PX = 13;
+
+type CreditRow = {
+  id: string;
+  lead: string;
+  href: string;
+  label: string;
+  src: string;
 };
 
-export function PartnerCredits({ dettGradientId, layout = "inline" }: Props) {
-  const wrapClass = layout === "inline" ? "credits-inline" : "credits";
+const rows: CreditRow[] = [
+  {
+    id: "owen",
+    lead: "Powered by",
+    href: "https://owenai.com",
+    label: "Owen AI",
+    src: "/partners/owen-wordmark.svg",
+  },
+  {
+    id: "dett",
+    lead: "Calculations by",
+    href: "https://dett.io",
+    label: "dett.io",
+    src: "/partners/dett-logo.png",
+  },
+  {
+    id: "clozable",
+    lead: "Loan readiness by",
+    href: "https://clozable.com",
+    label: "Clozable",
+    src: "/partners/clozable-wordmark.svg",
+  },
+  {
+    id: "ratesboard",
+    lead: "Pricing from",
+    href: "https://ratesboard.com",
+    label: "Ratesboard",
+    src: "/partners/ratesboard-wordmark-color.svg",
+  },
+];
 
+export function PartnerCredits() {
   return (
-    <div className={wrapClass}>
-      <div className="credit">
-        <OwenIcon className="credit-icon" />
-        Powered by Owen AI
-      </div>
-      <a
-        className="credit"
-        href="https://dett.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <DettIcon gradientId={dettGradientId} className="credit-icon" />
-        Calculations by dett.io
-      </a>
-      <div className="credit">
-        <PartnerCreditIcon src="/partners/clozable-icon-color.svg" />
-        Loan readiness from{" "}
-        <a
-          href="https://clozable.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="credit-nested-link"
-        >
-          Clozable
-        </a>
-      </div>
-      <div className="credit">
-        Pricing from{" "}
-        <a
-          href="https://ratesboard.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="credit-wordmark-link"
-          aria-label="Ratesboard"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/partners/ratesboard-wordmark-color.svg"
-            alt=""
-            className="credit-wordmark"
-            width={72}
-            height={13}
+    <div className="credits-inline">
+      {rows.map((row) => (
+        <div className="credit" key={row.href}>
+          <span className="credit-lead">{row.lead}</span>
+          <PartnerLogoLink
+            href={row.href}
+            label={row.label}
+            src={row.src}
+            className="credit-wordmark-link"
+            imgClassName={`credit-wordmark partner-logo partner-logo--${row.id}`}
+            height={FOOTER_LOGO_HEIGHT_PX}
           />
-        </a>
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
