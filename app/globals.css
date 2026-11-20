@@ -220,6 +220,19 @@ button {
   color: inherit;
 }
 
+.sidebar-partner-mark {
+  display: inline-flex;
+  line-height: 0;
+  cursor: default;
+}
+
+.credit-wordmark-mark {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  cursor: default;
+}
+
 .partner-logo {
   opacity: 0.85;
   vertical-align: baseline;
