@@ -1,16 +1,17 @@
 export type PartnerLogo = {
   id: string;
   name: string;
-  href: string;
   src: string;
+  href?: string;
+  linkable?: boolean;
 };
 
 export const PARTNER_LOGOS: PartnerLogo[] = [
   {
     id: "owen",
     name: "Owen AI",
-    href: "https://owenai.com",
     src: "/partners/owen-wordmark.svg",
+    linkable: false,
   },
   {
     id: "dett",
