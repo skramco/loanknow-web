@@ -171,8 +171,8 @@ function UnavailableMessage({
       </p>
       {code === "not_configured" ? (
         <p className="unavailable-detail">
-          This site is waiting on Owen API configuration (
-          <code>OWEN_API_URL</code>, <code>OWEN_API_KEY</code>).
+          We&apos;re getting everything ready—check back soon for answers to your
+          mortgage questions.
         </p>
       ) : null}
     </div>
