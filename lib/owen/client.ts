@@ -41,7 +41,7 @@ export async function askOwen(question: string): Promise<OwenAskResult> {
   if (!env.configured) {
     return unavailable(
       "not_configured",
-      "Owen AI is not connected for this site yet. Answers will appear here once the Owen API endpoint and credentials are configured.",
+      "We're still setting up answers for this site. Mortgage Q&A will appear here soon.",
       env.missing,
     );
   }
@@ -49,7 +49,7 @@ export async function askOwen(question: string): Promise<OwenAskResult> {
   // Credentials may be set in Netlify, but we do not call an undocumented endpoint.
   return unavailable(
     "not_implemented",
-    "Owen API environment variables are present, but the LoanKnow Owen client is not wired to a published API contract yet. Configure OWEN_API_URL, OWEN_API_KEY, and provide the request/response schema to complete integration.",
+    "Answers aren't live here yet. We're finishing the setup and will have mortgage Q&A available soon.",
     env.missing.length ? env.missing : undefined,
   );
 }

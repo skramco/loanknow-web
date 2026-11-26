@@ -29,14 +29,14 @@ const rows: CreditRow[] = [
   },
   {
     id: "clozable",
-    lead: "Loan readiness by",
+    lead: "Partner",
     href: "https://clozable.com",
     label: "Clozable",
     src: "/partners/clozable-wordmark.svg",
   },
   {
     id: "ratesboard",
-    lead: "Pricing from",
+    lead: "Partner",
     href: "https://ratesboard.com",
     label: "Ratesboard",
     src: "/partners/ratesboard-wordmark-color.svg",
